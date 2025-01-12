@@ -1,15 +1,20 @@
-import { useState } from "react";
-import './index.css'; 
+// Importing necessary components and styles
+import Cart from "./components/Cart";
+import Item from "./components/Item";
+import "./index.css";
 
+// Main App component
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <>
-        <div className="bg-black">
-          <h2 className="text-lg text-red-500 text-center">I'm Batman</h2>
-        </div>
-          
+      {/* Adding items to the application */}
+      <Item name="Macbook" price={100000} />
+      <Item name="Mobile" price={10000} />
+      <Item name="Pendrive" price={1000} />
+      <Item name="Dell laptop" price={60000} />
+
+      {/* Displaying the cart */}
+      <Cart />
     </>
   );
 }
