@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
   res.send("Server is ready");
 });
 
-app.get("/jokes", (req, res)=>{
+app.get("/api/jokes", (req, res)=>{
     const jokesarr = [
         {
             id:1,
@@ -32,12 +32,18 @@ app.get("/jokes", (req, res)=>{
             id:5,
             title:'5th joke',
             content:'this is fifth joke'
+        },
+        {
+            id:6,
+            title:'6th joke',
+            content:'this is the sixth joke'
         }
     ]
+    res.send(jokesarr)
 });
 
 const port = process.env.PORT || 4000;
 
 app.listen(port, () => {
-  console.log(`Serve at http://localhost${port}`);
+  console.log(`Serve at http://localhost:${port}`);
 });
