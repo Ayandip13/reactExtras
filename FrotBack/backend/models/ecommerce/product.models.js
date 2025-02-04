@@ -22,14 +22,14 @@ const productSchema = new mongoose.Schema(
       type: Number,
     },
     category: {
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'Category',
-        required:true
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Category",
+      required: true,
     },
-    owner:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:'User'
-    }
+    owner: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "User",
+    },
   },
   { timestamps: true }
 );
